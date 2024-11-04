@@ -1,20 +1,21 @@
 import mongoose from "mongoose";
 
+export interface ICharacterDB {
+  id: string;
+  name: string;
+  homeworld: string;
+  height: string;
+  url: string;
+}
+
 const characterSchema = new mongoose.Schema({
+  id: String,
   name: String,
-  height: String,
-  mass: String,
-  hair_color: String,
-  skin_color: String,
-  eye_color: String,
-  birth_year: String,
-  gender: String,
   homeworld: String,
-  films: [String],
-  vehicles: [String],
-  starships: [String],
+  height: String,
+  url: String,
 });
 
-const Character = mongoose.model("Character", characterSchema);
+const Character = mongoose.model<ICharacterDB>("Character", characterSchema);
 
-module.exports = Character;
+export default Character;

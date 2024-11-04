@@ -1,26 +1,18 @@
 import express, { Request, Response } from "express";
-const { people } = require("./controllers/index");
+import "./util/cronJob";
+require("./database/conectdb.ts");
 const app = express();
 const cors = require("cors");
-const PORT = 8080;
+import dotenv from "dotenv";
+dotenv.config();
 
+const PORT = process.env.PORT || 7000;
 app.use(cors());
 
-app.get("/api/people/", async (req: Request, res: Response) => {
-  try {
-    const response = await people();
-    console.log(response, "SASA");
-    res.status(200).send(response);
-  } catch (error) {
-    console.error("Error al obtener personajes:", error);
-    res.status(500).send({ error: "Internal Server Error" });
-  }
-});
+//Routes
+app.use(require("./routes/index.routes"));
 
+//Server run
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-/* app.get("/api/home", (req: Request, res: Response) => {
-  res.json({ message: "Hello Wolrd" });
-}); */
