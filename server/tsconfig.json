@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
-    /* "target": "es6",
-    "module": "commonjs", */
-    "module": "ESNext", // O "ES6"
-    "target": "ESNext",
+    "target": "ES6",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "outDir": "./dist",
     "rootDir": "./",
@@ -12,7 +10,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node"]
   },
-  "exclude": ["node_modules", "dist"]
+  "include": ["server.ts"]
 }
