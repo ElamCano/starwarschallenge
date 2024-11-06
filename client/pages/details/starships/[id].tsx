@@ -11,7 +11,7 @@ const StarshipsDetails = () => {
   const [starships, setStarships] = useState<IStarship>();
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/starships/${id}`)
+    fetch(`https://starwarschallenge.onrender.com/api/starships/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "asaasasaa");

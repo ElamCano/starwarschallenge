@@ -11,7 +11,7 @@ const FilmDetails = () => {
   const [film, setFilm] = useState<IFilm>();
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/films/${id}`)
+    fetch(`https://starwarschallenge.onrender.com/api/films/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "asaasasaa");

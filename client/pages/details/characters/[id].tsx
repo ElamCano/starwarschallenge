@@ -11,7 +11,7 @@ const CharacterDetails = () => {
   const [character, setCharacter] = useState<ICharacter>();
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/people/${id}`)
+    fetch(`https://starwarschallenge.onrender.com/api/people/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCharacter(data);

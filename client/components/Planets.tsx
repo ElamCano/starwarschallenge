@@ -29,7 +29,7 @@ const Planets = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/planets")
+    fetch("https://starwarschallenge.onrender.com/api/planets")
       .then((res) => res.json())
       .then((data) => {
         setPlanets(data);

@@ -27,7 +27,7 @@ const Films = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/films")
+    fetch("https://starwarschallenge.onrender.com/api/films")
       .then((res) => res.json())
       .then((data) => {
         setFilms(data);

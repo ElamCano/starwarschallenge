@@ -11,7 +11,7 @@ const PlanetDetails = () => {
   const [planet, setPlanet] = useState<IPlanet>();
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/planets/${id}`)
+    fetch(`https://starwarschallenge.onrender.com/api/planets/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "asaasasaa");
