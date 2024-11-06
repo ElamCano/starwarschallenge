@@ -33,7 +33,6 @@ const Characters = () => {
     fetch("http://localhost:8080/api/people")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data, "charar");
         setCharacters(data);
       });
   }, []);
@@ -48,7 +47,7 @@ const Characters = () => {
     );
     setFilteredCharacters(filtered);
   };
-  console.log(filteredCharacters, "characterss", characters);
+
   return (
     <section
       className=" w-full min-h-[650px] h-auto flex flex-col px-20 justify-between gap-10 bg-[#0a0a0a]"

@@ -1,40 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Star Wars Challenge
 
-## Getting Started
+![cover](/client/public/cover_readme.png)
 
-First, run the development server:
+Puedes acceder al sitio deployado en el siguiente: [Link](starwarschallenge-front.onrender.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Autor
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Elam Cano](https://www.linkedin.com/in/elam-cano-bb0419239/)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Tecnologías utilizadas
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+NextJs, TypeScript, TailWindCSS, Express, MongoDB, Mongo Compass, Mongo Atlas, Render, Axios, Cors, Dotenv, TS-Node, Nodemon.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Swapi
 
-## Learn More
+Se utilizó la API de [SWAPI](https://swapi.dev/) para recopilar y presentar la información detallada sobre películas, personajes, naves estelares y planetas, proporcionando una experiencia completa de exploración de datos.
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura del proyecto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+En cuanto a la estructura del proyecto, se implementó un monorepositorio que organiza la aplicación en dos secciones principales: un cliente desarrollado con Next.js ubicado en la carpeta `client` y un servidor construido con Node.js y Express en la carpeta `server`.
+La página funciona como una SPA de estilo "scroll de sábana", donde la barra de navegación permite acceder a las distintas secciones. Al hacer clic en cualquier card, el usuario es redirigido a una ruta dinámica que carga una nueva página detallada para el elemento seleccionado.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Base de Datos
 
-## Deploy on Vercel
+En primer lugar, se utilizó `MongoDB` junto con Mongoose y MongoDB Compass para gestionar y visualizar el almacenamiento de datos de forma local. Posteriormente, se migró la base de datos a la nube, utilizando MongoDB Atlas con infraestructura de hosting en AWS para mejorar la escalabilidad y el acceso remoto de los datos.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Endpoints (People, Starships, Films, Planets)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Para la creación de los cuatro endpoints requeridos, se utilizó Express, implementado en TypeScript junto con los compiladores necesarios para su ejecución en un entorno Node.js. Además de los endpoints que obtienen todos los registros, como en el caso de los personajes, se desarrollaron endpoints adicionales para acceder a los detalles individuales de cada recurso.
+
+## Paginado y Search
+
+Se implementó un sistema de paginación personalizado que muestra, de forma predeterminada, 8 tarjetas. Si el número de tarjetas supera esta cantidad, el paginador se activa, indicando la longitud total de los recursos disponibles. Además, se desarrolló una funcionalidad de búsqueda para filtrar por nombre, la cual funciona en sincronía con la paginación sin generar conflictos.
+
+## Diseño y responsive
+
+Aunque el diseño no se desarrolló de forma exhaustiva en los detalles, la página es completamente responsive e incorpora elementos de color y diseño personalizados para cada sección.
+
+## Deploy
+
+Como se mencionó previamente, la base de datos se alojó en MongoDB Atlas. Para el despliegue tanto del servidor backend como del cliente frontend, se utilizó la plataforma Render.
