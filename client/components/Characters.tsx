@@ -30,7 +30,7 @@ const Characters = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/people")
+    fetch("https://starwarschallenge.onrender.com/api/people")
       .then((res) => res.json())
       .then((data) => {
         setCharacters(data);
