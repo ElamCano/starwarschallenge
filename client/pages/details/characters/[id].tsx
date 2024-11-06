@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { ICharacter } from "../../../../server/interfaces";
+import { ICharacter } from "../../../interfaces";
 //Components
 import CardDetail from "@/components/CardDetail";
 import DetailNav from "@/components/DetailNav";

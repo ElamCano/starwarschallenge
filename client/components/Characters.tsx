@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ICharacterDB } from "../../server/schemas/People";
+import { ICharacterDB } from "../interfaces";
 //Components
 import Title from "./Title";
 import Input from "./Input";

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IStarshipDB } from "../../server/schemas/Starships";
+import { IStarshipDB } from "../interfaces";
 //Components
 import Title from "./Title";
 import Input from "./Input";

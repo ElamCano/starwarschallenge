@@ -1,4 +1,4 @@
-import { ICharacter, IFilm, IPlanet, IStarship } from "../../server/interfaces";
+import { ICharacter, IFilm, IPlanet, IStarship } from "../interfaces";
 
 interface Props {
   data: ICharacter | IFilm | IStarship | IPlanet;

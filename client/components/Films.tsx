@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IFilmDB } from "../../server/schemas/Films";
+import { IFilmDB } from "../interfaces";
 //Components
 import Title from "./Title";
 import Input from "./Input";

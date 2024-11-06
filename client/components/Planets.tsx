@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IPlanetDB } from "../../server/schemas/Planets";
+import { IPlanetDB } from "../interfaces";
 
 //Components
 import Card from "./Card";
