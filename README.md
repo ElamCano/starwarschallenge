@@ -2,7 +2,7 @@
 
 ![cover](/client/public/cover_readme.png)
 
-Puedes acceder al sitio deployado en el siguiente: [Link](starwarschallenge-front.onrender.com)
+Puedes acceder al sitio deployado en el siguiente: [Link](https://starwarschallenge-front.onrender.com/)
 
 ## Autor
 
