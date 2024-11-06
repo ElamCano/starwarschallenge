@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"No build step required\"",
-    "start": "npx ts-node -r tsconfig-paths/register server.ts",
+    "start": "npm install && npx ts-node -r tsconfig-paths/register server.ts",
     "dev": "nodemon server"
   },
   "author": "Elam Cano",
